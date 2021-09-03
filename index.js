@@ -17,10 +17,10 @@ mongoose
   });
 
 app.use(express.json());
-app.get("/", (req, res) => {
-  res.send("server is been ready");
-});
-app.use("/api/person", callRoute);
+// app.get("/", (req, res) => {
+//   res.send("server is been ready");
+// });
+app.use("/", callRoute);
 app.use(cors());
 
 app.listen(port, () => {
